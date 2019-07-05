@@ -25,13 +25,15 @@ class App extends Component {
       .catch(error => console.log(error));
   };
   _renderMovie = () => {
-    const movies = this.state.movies.map((movie, index) => {
+    const movies = this.state.movies.map(movie => {
       //console.log(movie);
       return (
         <Movie
           title={movie.title}
           poster={movie.medium_cover_image}
-          key={index}
+          key={movie.id}
+          genres={movie.genres}
+          synopsis={movie.synopsis}
         />
       );
     });
