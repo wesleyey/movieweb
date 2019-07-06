@@ -15,6 +15,7 @@ class Movie extends Component {
       <div className="Movie">
         <div className="Movie__columns">
           <img
+            className="Movie__poster"
             src={this.props.poster}
             alt={this.props.title}
             title={this.props.title}
